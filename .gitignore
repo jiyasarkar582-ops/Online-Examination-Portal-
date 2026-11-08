@@ -35,3 +35,4 @@ server/.mvn/timing.properties
 # Logs and runtime databases
 *.log
 *.h2.db
+

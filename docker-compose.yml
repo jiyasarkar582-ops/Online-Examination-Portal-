@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  # MySQL 8.0 Relational Database
+  mysql-db:
+    image: mysql:8.0
+    container_name: examportal-mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: examportal_db
+      MYSQL_USER: examuser
+      MYSQL_PASSWORD: exampassword
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./server/src/main/resources/schema.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 5s
+      retries: 10
+
+  # Spring Boot REST Backend
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: examportal-backend
+    restart: always
+    environment:
+      SPRING_PROFILES_ACTIVE: mysql
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/examportal_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      MYSQL_USER: examuser
+      MYSQL_PASSWORD: exampassword
+    ports:
+      - "8080:8080"
+    depends_on:
+      mysql-db:
+        condition: service_healthy
+
+  # React Vite Frontend (Nginx)
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: examportal-frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:
