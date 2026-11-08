@@ -1,0 +1,37 @@
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node / Frontend
+client/node_modules/
+client/dist/
+client/dist-ssr/
+client/*.local
+.npm
+.eslintcache
+
+# Java / Maven / Backend
+server/target/
+server/*.jar
+server/*.war
+server/*.ear
+server/.mvn/timing.properties
+*.class
+
+# IDE and Editor Files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Logs and runtime databases
+*.log
+*.h2.db
