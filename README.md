@@ -1,19 +1,19 @@
-# 🎓 Online Examination Portal with Smart Proctoring
+ Online Examination Portal with Smart Proctoring
 
 An enterprise-grade, modern, and production-oriented academic examination platform built in strict compliance with the institutional Product Requirements Document (PRD).
 
-🔗 **GitHub Repository:** [https://github.com/jiyasarkar582-ops/Online-Examination-Portal-](https://github.com/jiyasarkar582-ops/Online-Examination-Portal-)
+**GitHub Repository:** [https://github.com/jiyasarkar582-ops/Online-Examination-Portal-](https://github.com/jiyasarkar582-ops/Online-Examination-Portal-)
 
 ---
 
-## 📖 1. Project Overview
+1. Project Overview
 
 The **Online Examination Portal with Smart Proctoring** is a full-stack, enterprise-grade academic assessment and examination management system. It digitizes the complete academic examination lifecycle—from question bank authoring, exam scheduling, and timed assessments to real-time telemetry monitoring, automated objective grading, descriptive answer evaluation, and result publication.
 
-### 🎯 1.1 Product Vision
+1.1 Product Vision
 Deliver a secure, fair, reliable, and user-friendly examination platform that supports objective and descriptive assessments, provides distraction-free test environments for students, empowers examiners with comprehensive authoring and grading suites, and provides transparent, evidence-based telemetry when suspicious activity occurs.
 
-### 🏆 1.2 Core Objectives & Goals
+1.2 Core Objectives & Goals
 1. **End-to-End Digital Examination Lifecycle**: Manage the entire flow including curriculum-based question bank curation, test scheduling, student eligibility checks, timed test delivery, automated objective scoring, manual descriptive answer evaluation, and tamper-proof scorecard issuance.
 2. **Three-Tier Role-Based Workspaces**: Complete separation of concerns and access control for:
    - **Students**: Timed tests, answer autosave, real-time question palette, and performance analytics.
@@ -25,9 +25,9 @@ Deliver a secure, fair, reliable, and user-friendly examination platform that su
 
 ---
 
-## 🌟 2. Key Modules & Functional Workspaces
+2. Key Modules & Functional Workspaces
 
-### 👨‍🎓 Student Workspace
+ Student Workspace
 - **Dashboard & Eligibility**: Real-time view of enrolled courses, currently active tests within permitted windows, upcoming examinations, and released results.
 - **Pre-Exam Instructions & Consent Modal**: Displays duration, total marks, negative marking rules, attempt limits, and obtains explicit student consent for browser monitoring per PRD **FR-012** & **FR-075**.
 - **Distraction-Free Exam Screen**:
@@ -42,14 +42,14 @@ Deliver a secure, fair, reliable, and user-friendly examination platform that su
   - **Real-Time Autosave**: Background synchronization with live indicator (`Syncing...` / `All answers saved`).
 - **Scorecards & Analytics**: Verified statement of marks, grade badges (A+, A, B, etc.), printable PDF scorecard export, and Recharts performance trajectory charts.
 
-### 👩‍🏫 Teacher / Examiner Studio
+### Teacher / Examiner Studio
 - **Examination Portfolio Manager**: Author, edit, duplicate, publish, and close examinations.
 - **Multi-Step Exam Creation Wizard**: Configure duration, total marks, passing criteria, negative marking penalties (0.25 / 0.33 / 0.50), attempt limits, and proctoring threshold rules.
 - **Institutional Question Bank**: Manage reusable questions across MCQ, True/False, and Descriptive types with point weights, explanations, and secure answer keys.
 - **Submissions & Descriptive Grading Studio**: Review auto-scored objective points alongside student descriptive answers, reference rubrics, score inputs, and evaluator feedback comments.
 - **Proctoring Incident Investigation Center**: Inspect chronological event timelines (e.g. *10:15 Focus lost*, *10:17 Repeated tab switch*, *10:19 Clipboard paste*), read algorithmic findings, and record formal examiner decisions (`CLEARED`, `WARNING_UPHELD`, `SCORE_PENALIZED`, `EXAM_CANCELLED`) with written rationale.
 
-### 🛡️ Admin Governance Console
+### Admin Governance Console
 - **Platform Analytics**: Global KPIs (enrolled students, faculty, completion rate), Recharts monthly attempt volume trends, and violation telemetry distribution.
 - **User Directory**: Provision student and faculty accounts, filter by role, and toggle account activation or suspension.
 - **Academic Departments**: Department directory, course allocations, and faculty assignments.
@@ -58,7 +58,7 @@ Deliver a secure, fair, reliable, and user-friendly examination platform that su
 
 ---
 
-## 👁️ 3. Smart Proctoring Policy & Limitations
+3. Smart Proctoring Policy & Limitations
 
 | Observable Signal | Observed Behavior | System Action & Limitation Note |
 |---|---|---|
@@ -70,7 +70,7 @@ Deliver a secure, fair, reliable, and user-friendly examination platform that su
 
 ---
 
-## 🛠️ 4. Technology Stack
+Technology Stack
 
 | Layer | Technologies |
 |---|---|
@@ -87,7 +87,7 @@ Deliver a secure, fair, reliable, and user-friendly examination platform that su
 
 ---
 
-## 👥 5. Default Institutional Seed Accounts
+5. Default Institutional Seed Accounts
 
 The platform automatically provisions these pre-configured institutional accounts upon backend startup:
 
@@ -101,7 +101,7 @@ The platform automatically provisions these pre-configured institutional account
 
 ---
 
-## 🚀 6. Quick Start & Execution
+6. Quick Start & Execution
 
 ### Prerequisites
 - Node.js (v18+) & npm
@@ -148,7 +148,7 @@ docker compose up --build
 
 ---
 
-## 🧪 7. Automated Testing Suite
+7. Automated Testing Suite
 
 ```bash
 cd server
@@ -161,7 +161,7 @@ mvn test
 
 ---
 
-## 📂 8. Project Structure
+8. Project Structure
 
 ```
 Online Examination Portal/
@@ -212,5 +212,5 @@ Online Examination Portal/
 
 ---
 
-## 📜 9. Compliance & Academic Integrity
+9. Compliance & Academic Integrity
 Built in accordance with academic fair evaluation standards, student data minimization, auditable proctoring logs, and human-in-the-loop disciplinary oversight.
